@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find A Doctor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <style>
+  img {
+width: 25%;
+    margin: 5px;
+}
+
+
+
+.h2, h2 {
+    font-size: 2rem;
+    margin-top: 49px;
+    text-align: center;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    top: 70px;
+    vertical-align: middle;
+    border: none;
+    left: 54px;
+    width: 62%;
+    text-align: center;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #30773a !important;
+    border-color: #30773a !important;
+}
+
+</style>
+
+</head>
+<body>
+	<img src="https://lh3.googleusercontent.com/-VRVtU3aQCik/W2Wj9DSjNTI/AAAAAAAAAJ0/lHJYq-mvvj8YPN4oUQc6DDsz_0WrsZPVwCL0BGAs/w530-d-h248-n-rw/Unathi.png" style="align-self: center;">
+	<h2>Your Symptoms <br>where successfuly <br>recorded</h2>
+
+<div  class="btn-group-vertical">
+  <input class="btn btn-primary" type="button" value="Cash" onclick="window.location.href= '{{ url_for('map') }}'">
+  <input class="btn btn-primary" type="button" value="Public Facility" onclick="window.location.href= '{{ url_for('map') }}'">
+  <input class="btn btn-primary" type="button" value="Medical Aid" onclick="window.location.href= '{{ url_for('map') }}'">
+  <input class="btn btn-primary" type="button" value="Pharmacy" onclick="window.location.href= '{{ url_for('map') }}'"> 
+</div>
+
+</body>
+</html>

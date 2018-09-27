@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>unathi</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+</head>
+
+<style>
+  html, body {
+    font-family: sans-serif;
+     background: #fff;
+     color: #ffffff
+    }
+
+h2 {
+text-align: center;
+    font-family: sans-serif;
+    font-size: 4em;
+    margin-top: 3em;
+    color: #E91E63;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px 20px 20px 20px;
+}
+
+p#slogan {
+    text-align: center;
+    color: black;
+    margin-bottom: 29px;
+    font-size: 19px;
+    margin-right: 21px;
+    margin-top: 23px;
+}
+
+.btn {
+    width: 100%;
+    height: 35px;
+    border: none;
+    background: #6cff1d;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 20px 20px 20px 20px;
+}
+/* Set a style for all buttons */
+.button {
+    background-color: #425B3C;
+    color: white;
+    font-size: 27px;
+    padding: 6px 19px;
+    margin-left: 32 %;
+    border: none;
+    border-radius: 25px 25px 25px 25px;
+    cursor: pointer;
+    width: 30%;
+    margin-top: 51px;
+}
+.button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.avatar {
+    width: 40%;
+    border-radius: 50%;
+    margin-left: 2px;
+}
+
+.container {
+    padding: 16px;
+    background-color:#30773a;
+}
+
+span.psw {
+    text-align: center;
+    color: #ffffff;
+}
+img{
+    width: 152px;
+    align-items: center;
+    margin-left: 78px;
+    margin-top: 96px;
+}
+
+/*alignment was off*/
+
+/*span.psw {
+    float: right;
+    padding-top: 16px;
+}
+*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 35px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 22em; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+    background: #30773a;
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+
+</style>
+
+<body>
+<div class="header">
+<img src="https://lh3.googleusercontent.com/-VRVtU3aQCik/W2Wj9DSjNTI/AAAAAAAAAJ0/lHJYq-mvvj8YPN4oUQc6DDsz_0WrsZPVwCL0BGAs/w530-d-h248-n-rw/Unathi.png">>
+<p id="slogan">doctor in your pocket</p>
+</div>
+
+<button class="button" onclick="document.getElementById('id01').style.display='block'" >Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="">
+
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="human.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw">
+        
+      <button class="btn" type="submit"onclick="window.location.href='http://127.0.0.1:5000/'">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container">
+		
+		<!-- cancelatin button exists -->
+      <!-- <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> --> 
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+</body>
+
+<script>
+
+   // Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+
+</html>
+
+
+
+<!-- 	<body>
+		<div class="header">
+			<h1 id="hearder">Order</h1>
+			<p id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi sed, labore. Iusto illum illo ex, sequi nostrum id atque officia numquam quo. Asperiores est deleniti quis ut, rem consectetur sapiente, commodi nulla perferendis distinctio non eligendi repellat suscipit illum iure cum ducimus. Repudiandae asperiores dolorem atque laudantium unde quia iure molestias neque culpa aliquam eius assumenda minima dolores corporis tempore, enim, repellendus blanditiis a deleniti. Nesciunt odio laboriosam, dolorum ex ullam aliquid quisquam fugiat vel fugit saepe ad deleniti labore cum inventore. Nulla quo facere mollitia dolore reprehenderit debitis quos at, harum officia inventore quaerat quibusdam voluptates consequuntur, neque consectetur!</p>
+		</div>
+		<div  onload="disableSubmit()">
+ 		<input type="checkbox" name="terms" id="terms" onchange="activateButton(this)" > I Agree Terms & Coditions
+		<br><br>
+  		<input type="submit" name="submit" id="submit">	
+  		</div>
+	</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head> -->

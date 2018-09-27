@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>unathi</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #ffffff !important;
+}
+
+header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+h1#hearder {
+text-align: center;
+    font-family: sans-serif;
+    font-size: 3em;
+    color: #333333;
+    font-weight: 700;
+    padding-top: 55px;
+}
+
+
+.navbar-default {
+    background-color: #59b9f8 !important;
+    border-color: #70c3fa !important;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff !important;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+p#text {
+font-size: 14px;
+    font-family: sans-serif;
+    margin-top: 2em;
+    padding: 21px 19px 19px 13px;
+    text-align: left;
+    color: #ffffff;
+    background: #30773a;
+}
+
+input#submit {
+    font-size: 15px;
+    width: 23%;
+    margin-left: 39%;
+    margin-top: 0;
+    height: 41px;
+    background: #6cff1d;
+    border: none;
+    border-radius: 22px 22px 22px 22px;
+}
+
+#submit {
+    font-size: 1.5em;
+    font-family: sans-serif;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+div {
+/*    padding-top: 15px;*/
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #FFF;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.avatar {
+    width: 18%;
+    border-radius: 50%;
+    margin-left: 41px;
+    float: left;
+    padding: 8px;
+    margin-right: 11px;
+}
+
+p#user {
+    font-size: 15px;
+    padding: 3px;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin: 4px 16px 0 !important;
+    margin-top: 1px\9;
+    line-height: normal;
+}
+
+h {
+    font-size: 27px;
+}
+
+img {
+    /* vertical-align: middle; */
+    margin-left: 1%;
+    height: 24%;
+    width: 25%;
+    margin-top: 7px;
+}
+  
+</style>
+
+
+<body>
+<img src="https://lh3.googleusercontent.com/-VRVtU3aQCik/W2Wj9DSjNTI/AAAAAAAAAJ0/lHJYq-mvvj8YPN4oUQc6DDsz_0WrsZPVwCL0BGAs/w530-d-h248-n-rw/Unathi.png" style="align-self: center;">
+<div class="container">
+  <div class="header">
+			<h1 id="hearder">Collection</h1>
+
+			<p id="text"><h style="text-align: center;">Receipt</h> <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quasi provident itaque soluta eveniet, ut sint fugiat placeat! Nulla, hic deleniti modi reprehenderit quidem blanditiis praesentium aspernatur, ducimus ipsam animi vitae quas dicta, dolore eius. Officia obcaecati nulla vero, incidunt voluptates voluptatem aperiam qui architecto vitae deserunt suscipit, id dolore, et autem fugit sequi iusto? D. <br><h style="text-align: center;">#345<h> 
+      </p>
+		</div>
+	<title>Testing QR code</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            function generateBarCode()
+            {
+                var nric = $('#text').val();
+                var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + nric + '&amp;size=50x50';
+                $('#barcode').attr('src', url);
+            }
+
+             function disableSubmit() {
+  document.getElementById("submit").disabled = true;
+ }
+
+  function activateButton(element) {
+
+      if(element.checked) {
+        document.getElementById("submit").disabled = false;
+       }
+       else  {
+        document.getElementById("submit").disabled = true;
+      }
+
+  }
+        </script>
+    </head>
+    <body>
+       <!--  <input id="text" type="text" 
+            value="NRIC or Work Permit" style="Width:20%"
+            onblur='generateBarCode();' />  -->
+
+      <img id='barcode' 
+            src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=100x100" 
+            alt="" 
+            title="HELLO" 
+            width="50" 
+            height="50" />
+   
+	</body>
+</html>
